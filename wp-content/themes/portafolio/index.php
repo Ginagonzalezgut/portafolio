@@ -1,33 +1,15 @@
-<!DOCTYPE html>
-<html lang="es">
+<?php get_header(); ?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<main>
+    <?php
+    while (have_posts()): the_post();
+        the_title();
 
-<body>
+        the_content();
 
-    <header class="header">
-        <?php
-        $args = array(
-            'theme-location' => 'menu-principal',
-            'container' => 'nav'
-        );
-        wp_nav_menu($args);
-        ?>
-    </header>
-    <main>
-        <?php
-        while (have_posts()): the_post();
-            the_title();
-
-            the_content();
-
-        endwhile;
-        ?>
-    </main>
+    endwhile;
+    ?>
+</main>
 </body>
 
 </html>

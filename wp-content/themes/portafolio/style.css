@@ -14,23 +14,88 @@ Text Domain: portafolio
 Tags: portafolio
 */
 
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap");
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --brand: #f11158;
+  --secondtextcolor: #444c51;
+
+  --fuente-principal: "Raleway", serif;
+  --fuente-secundaria: "Quicksand", serif;
+  --fuente-terciaria: "Sora", serif;
+}
+
+body {
+  font-family: var(--fuente-principal);
+  -webkit-font-smoothing: antialiased;
+  color: var(--foreground);
+  background: var(--background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .header {
+  font-weight: 600;
   position: absolute;
-  right: 50px;
   top: 40px;
   width: 100%;
+  right: 50px;
   z-index: 1;
 }
 
-.menu {
+.header a {
   color: #707c84;
-  display: flex;
-  flex-direction: row;
-  font-weight: 600;
-  gap: 30px;
-  justify-content: center;
+  text-decoration: none;
 }
 
-.menu a:hover {
-  color: var(--brand);
+.header a:hover {
+  color: black;
+}
+
+.header .menu {
+  justify-content: end;
+}
+
+.menu {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  color: white;
+  flex-direction: row;
+}
+
+.menu ul {
+  list-style: none;
+}
+
+/* PAGE */
+
+.hero {
+  /* background-image: url(../../../public/laptop2.jpg); */
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: end;
+  color: white;
+}
+
+.title {
+  font-size: 30px;
+  letter-spacing: 2;
+  font-weight: 600;
+  line-height: 1.4;
+  text-transform: capitalize;
+  margin-bottom: 20;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 58px;
+  }
 }
