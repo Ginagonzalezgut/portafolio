@@ -1,0 +1,36 @@
+/*
+Theme Name: Portafolio
+Theme URI: 
+Author: Gina González
+Author URI: https://github.com/Ginagonzalezgut
+Description: Portafolio profesional
+Requires at least: 6.7
+Tested up to: 6.7
+Requires PHP: 7.2
+Version: 1.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: portafolio
+Tags: portafolio
+*/
+
+.header {
+  position: absolute;
+  right: 50px;
+  top: 40px;
+  width: 100%;
+  z-index: 1;
+}
+
+.menu {
+  color: #707c84;
+  display: flex;
+  flex-direction: row;
+  font-weight: 600;
+  gap: 30px;
+  justify-content: center;
+}
+
+.menu a:hover {
+  color: var(--brand);
+}
